@@ -1,0 +1,34 @@
+<!doctype html>
+<html ng-app="got">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script type="text/javascript" src="https://code.angularjs.org/1.3.14/angular.min.js"></script>
+    </head>
+    <body>
+    <div ng-controller="searchCharecter">
+    My favrourite Game of Thrones charecters are:
+    <ul>
+    <li ng-repeat="charecter in charecters | filter: search">
+    <p> {{charecter.name}} of Clan {{charecter.clan}}.</p>
+    </li>
+    </ul>
+    Search By name: <input type="text" ng-model="search.name" />
+    Search By Clan: <input type="text" ng-model="search.clan" />
+    </div>
+    <script type="text/javascript">
+        var application = angular.module("got", []);
+        application.controller("searchCharecter", function($scope, $http) {
+            
+            $http.get("http://localhost:3333/data/got-charecters.json")
+            .success(function(response) {
+                $scope.charecters = response.charecters
+            })
+
+        });
+    </script>
+    </body>
+</html>

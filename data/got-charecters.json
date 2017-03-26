@@ -1,0 +1,40 @@
+{
+	"charecters" : [
+		{
+            "name" : "Jon Snow",
+                "clan" : "Stark"
+            },{
+                "name" : "Aarya Stark",
+                "clan" : "Stark"
+            },{
+                "name" : "Sansa Stark",
+                "clan" : "Stark"
+            },{
+                "name" : "Danerys Targarean",
+                "clan" : "Targarean"
+            },{
+                "name" : "Cersie Lannister",
+                "clan" : "Lannister"
+            },{
+                "name" : "Tyrion Lannister",
+                "clan" : "Lannister"
+            },{
+                "name" : "Jamie Lannister",
+                "clan" : "Lannister"
+            },{
+                "name" : "Rob Stark",
+                "clan" : "Stark"
+            },{
+                "name" : "Ramsay Bolton",
+                "clan" : "Bolton"
+            },{
+                "name" : "Margery Tyrell",
+                "clan" : "Tyrell"
+            },{
+                "name" : "Varys",
+                "clan" : "Targarean"
+            },{
+                "name" : "Little Finger",
+                "clan" : "Stark"
+            }]
+}
