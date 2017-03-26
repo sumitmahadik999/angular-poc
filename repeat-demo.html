@@ -1,0 +1,22 @@
+<!doctype html>
+<html ng-app="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script type="text/javascript" src="https://code.angularjs.org/1.3.14/angular.min.js"></script>
+    </head>
+    <body>
+    <div ng-init="langauges=[{'name': 'HTML', 'proficiency':'Expert'},{'name': 'Javascript', 'proficiency':'Expert'}]">
+    My Preferred languages and proficiency are:
+    <ul>
+    <li ng-repeat="language in langauges">
+    <p>Language : {{language.name}}</p>
+    <p>Proficiency : {{language.proficiency}} </p>
+    </li>
+    </ul>
+    </div>
+    </body>
+</html>

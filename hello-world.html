@@ -1,0 +1,24 @@
+<!doctype html>
+<html ng-app="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script type="text/javascript" src="https://code.angularjs.org/1.3.14/angular.min.js"></script>
+    </head>
+    <body>
+    <input type="text" ng-model="name" />
+    <div>Hello {{name}}</div>
+    <div ng-bind="name"></div>
+    <div> {{10 * 10}}</div>
+    <div ng-init="langauge='Angula Js'">
+    My Preferred language is {{langauge}}
+    </div>
+    {{langauge}}
+
+    <input type="text" ng-model="amount" />
+    Amount Entered : {{amount | currency : "Rs. ": 0}}
+    </body>
+</html>

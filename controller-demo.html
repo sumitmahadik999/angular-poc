@@ -1,0 +1,75 @@
+<!doctype html>
+<html ng-app="got">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script type="text/javascript" src="https://code.angularjs.org/1.3.14/angular.min.js"></script>
+    </head>
+    <body>
+    <div ng-controller="favrouiteCharecter">
+    My favrourite Game of Thrones charecters are:
+    <ul>
+    <li ng-repeat="charecter in charecters">
+    <p><button ng-click="selectCharecter(charecter)">Select</button> {{charecter.name}} of Clan {{charecter.clan}}.</p>
+    </li>
+    </ul>
+
+    Your Favourite Charecters are:
+    <ul>
+    <li ng-repeat="favCharecter in myFavCharecters">
+    <p>{{favCharecter.name}} of Clan {{favCharecter.clan}}.</p>
+    </li>
+    </ul>
+    </div>
+    <script type="text/javascript">
+        var application = angular.module("got", []);
+        application.controller("favrouiteCharecter", ["$scope", function($scope) {
+            $scope.charecters = [{
+                'name' : 'Jon Snow',
+                'clan' : 'Stark'
+            },{
+                'name' : 'Aarya Stark',
+                'clan' : 'Stark'
+            },{
+                'name' : 'Sansa Stark',
+                'clan' : 'Stark'
+            },{
+                'name' : 'Danerys Targarean',
+                'clan' : 'Targarean'
+            },{
+                'name' : 'Cersie Lannister',
+                'clan' : 'Lannister'
+            },{
+                'name' : 'Tyrion Lannister',
+                'clan' : 'Lannister'
+            },{
+                'name' : 'Jamie Lannister',
+                'clan' : 'Lannister'
+            },{
+                'name' : 'Rob Stark',
+                'clan' : 'Stark'
+            },{
+                'name' : 'Ramsay Bolton',
+                'clan' : 'Bolton'
+            },{
+                'name' : 'Margery Tyrell',
+                'clan' : 'Tyrell'
+            },{
+                'name' : 'Varys',
+                'clan' : 'Targarean'
+            },{
+                'name' : 'Little Finger',
+                'clan' : 'Stark'
+            }];
+        $scope.myFavCharecters = [];
+
+        $scope.selectCharecter = function(charecter) {
+            $scope.myFavCharecters.push(charecter);
+        }
+        }]);
+    </script>
+    </body>
+</html>
